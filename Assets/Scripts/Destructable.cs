@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Destructable : MonoBehaviour
 {
@@ -40,12 +42,10 @@ public class Destructable : MonoBehaviour
     void Update()
     {
         Vector3 offset = new Vector3(XOffset, YOffset, ZOffset);
-        Health -= 1;
 
         if (!_replaced && Health <= 0)
         {
             Destroy(gameObject);
-            Debug.Log(_newsize);
             
             // beautiful triple for loop here
             for (float i = 0; i < _size.x; i += FillSize)
@@ -70,6 +70,17 @@ public class Destructable : MonoBehaviour
             }
 
             _replaced = true;
+        }
+    }
+
+    public void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == "Projectile")
+        {
+            Projectile oth = other.gameObject.GetComponent<Projectile>();
+            Health -= oth.Damage;
+            
+            Destroy(other.gameObject);
         }
     }
 }
