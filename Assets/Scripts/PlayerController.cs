@@ -27,14 +27,15 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         timeToFire = 0f;
-        cameraDiff = Camera.main.transform.position.y - transform.position.y;
     }
     
     // Update is called once per frame
     void Update()
     {
-        FollowMouse();
         timeToFire = Math.Max(0f, timeToFire - Time.deltaTime);
+        cameraDiff = Camera.main.transform.position.z - transform.position.z;
+        
+        FollowMouse();
         
         float moveX = Input.GetAxis("Horizontal") * Speed; // AD
         float moveZ = Input.GetAxis("Vertical") * Speed; // WS
@@ -63,8 +64,8 @@ public class PlayerController : MonoBehaviour
      void FollowMouse()
      {
         worldPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,
-                                                              cameraDiff,
-                                                              Input.mousePosition.z));
+                                                              Input.mousePosition.y,
+                                                              cameraDiff));
 
         transform.LookAt(new Vector3(worldPos.x, transform.position.y, worldPos.z));
         // Seems to be only rotating 90 degrees

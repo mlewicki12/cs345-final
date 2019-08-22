@@ -26,16 +26,13 @@ public class Destructable : MonoBehaviour
     private bool _replaced;
 
     private Vector3 _size;
-    private Vector3 _newsize;
     private Rigidbody _rigidbody;
     
     // Start is called before the first frame update
     void Start()
     {
         _replaced = false;
-
         _size = GetComponent<Collider>().bounds.size;
-        _newsize = Fill.GetComponent<Collider>().bounds.size;
     }
 
     // Update is called once per frame
@@ -75,7 +72,7 @@ public class Destructable : MonoBehaviour
 
     public void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag == "Projectile")
+        if (other.gameObject.CompareTag("Projectile"))
         {
             Projectile oth = other.gameObject.GetComponent<Projectile>();
             Health -= oth.Damage;
