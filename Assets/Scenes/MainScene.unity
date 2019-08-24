@@ -472,9 +472,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1832b8b56c385409285e949e8d509d1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 3
+  Acceleration: 5
   Class: 0
   FireSource: {fileID: 1728628950}
+  Decceleration: {x: 2, y: 0, z: 2}
+  MaxSpeed: {x: 2, y: 0, z: 2}
   SpellSpeed: {x: 0, y: 0, z: 5}
   FireTime: 0.5
   ProjectileLifeTime: 10

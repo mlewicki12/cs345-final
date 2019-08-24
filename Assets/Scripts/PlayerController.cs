@@ -20,10 +20,8 @@ public class PlayerController : MonoBehaviour
     public float ProjectileLifeTime;
     
     private float _timeToFire;
-    private float _cameraDiff;
     private Vector3 _worldPos;
     private Vector3 _speed;
-    private Rigidbody _rigidbody;
 
     public GameObject MageSpell; // there's gotta be a better way to store spells
     // actually, GameObject[], allowing for players to switch spells
@@ -32,52 +30,12 @@ public class PlayerController : MonoBehaviour
     {
         _timeToFire = 0f;
         _speed = new Vector3(0, 0, 0);
-        _rigidbody = GetComponent<Rigidbody>();
     }
 
-    Vector3 Min(Vector3 first, Vector3 second)
-    {
-        float x, z;
-
-        if (Math.Abs(second.x) > first.x)
-        {
-            x = first.x * Math.Sign(second.x);
-        }
-        else x = second.x;
-
-        if (Math.Abs(second.z) > first.z)
-        {
-            z = first.z * Math.Sign(second.z);
-        }
-        else z = second.z;
-
-        return new Vector3(x, 0, z);
-    }
-
-    Vector3 Deccel(Vector3 inp, Vector3 speed)
-    {
-        speed = Decceleration * Time.deltaTime;
-        
-        if (inp.x < 0)
-        {
-            inp.x = Math.Min(inp.x + speed.x, 0);
-        }
-        else inp.x = Math.Max(inp.x - speed.x, 0);
-
-        if (inp.z < 0)
-        {
-            inp.z = Math.Min(inp.z + speed.z, 0);
-        }
-        else inp.z = Math.Max(inp.z - speed.z, 0);
-
-        return inp;
-    }
-    
     // Update is called once per frame
     void Update()
     {
         _timeToFire = Math.Max(0f, _timeToFire - Time.deltaTime);
-        _cameraDiff = Camera.main.transform.position.z - transform.position.z;
         
         FollowMouse();
         
@@ -87,10 +45,8 @@ public class PlayerController : MonoBehaviour
         moveX *= Time.deltaTime;
         moveZ *= Time.deltaTime;
 
-        _speed += new Vector3(-moveX, 0, moveZ);
-        _speed = Deccel(_speed, Decceleration);
-        
-        _rigidbody.velocity = Min(MaxSpeed, _speed);
+        _speed = new Vector3(moveX, 0, moveZ);
+        transform.Translate(_speed);
 
         if (Input.GetMouseButton(0) && _timeToFire <= 0f)
         {
@@ -110,11 +66,22 @@ public class PlayerController : MonoBehaviour
 
      void FollowMouse()
      {
-        _worldPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,
-                                                              Input.mousePosition.y,
-                                                              _cameraDiff));
-
-        transform.LookAt(new Vector3(_worldPos.x, transform.position.y, _worldPos.z));
+     //  _worldPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,
+     //                                                       Input.mousePosition.y,
+     //                                                       _cameraDiff));
+     //  transform.LookAt(new Vector3(_worldPos.x, transform.position.y, _worldPos.z));
+         var ray = Camera.main.ScreenPointToRay(new Vector3(Input.mousePosition.x,
+             Input.mousePosition.y,
+             0));
+         
+         RaycastHit hit;
+         if (Physics.Raycast(ray, out hit, 100))
+         {
+             var dir = hit.transform.position;
+             dir.y = transform.position.y;
+             
+             transform.LookAt(dir);
+         }
      }
 
     void FireSpell()
