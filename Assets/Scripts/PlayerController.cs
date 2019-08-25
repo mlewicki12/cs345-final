@@ -66,10 +66,6 @@ public class PlayerController : MonoBehaviour
 
      void FollowMouse()
      {
-     //  _worldPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,
-     //                                                       Input.mousePosition.y,
-     //                                                       _cameraDiff));
-     //  transform.LookAt(new Vector3(_worldPos.x, transform.position.y, _worldPos.z));
          var ray = Camera.main.ScreenPointToRay(new Vector3(Input.mousePosition.x,
              Input.mousePosition.y,
              0));
@@ -77,7 +73,7 @@ public class PlayerController : MonoBehaviour
          RaycastHit hit;
          if (Physics.Raycast(ray, out hit, 100))
          {
-             var dir = hit.transform.position;
+             var dir = hit.point;
              dir.y = transform.position.y;
              
              transform.LookAt(dir);
@@ -87,7 +83,7 @@ public class PlayerController : MonoBehaviour
     void FireSpell()
     {
         var spell = Instantiate(MageSpell, FireSource.transform.position, transform.rotation);
-        spell.GetComponent<Rigidbody>().velocity = SpellSpeed;
+        spell.GetComponent<Rigidbody>().velocity = SpellSpeed.x * transform.right + SpellSpeed.z * transform.forward;
         
         Destroy(spell, ProjectileLifeTime);
     }
