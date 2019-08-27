@@ -1,5 +1,4 @@
 ﻿
-using System;
 using UnityEngine;
 
 public class EntityInfo : MonoBehaviour
@@ -24,6 +23,13 @@ public class EntityInfo : MonoBehaviour
         {
             _dead = true;
             gameObject.GetComponent<ChatText>().Clear();
+            
+            var hp = gameObject.GetComponent<HealthBar>();
+            if (hp != null)
+            {
+                hp.Hide();
+            }
+            
             Destroy(gameObject);
         }
     }

@@ -885,7 +885,7 @@ PrefabInstance:
     - target: {fileID: 6918805887249726029, guid: 808728991a07e4f2c8a34ce1ae74b948,
         type: 3}
       propertyPath: Messages.Array.size
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6918805887249726029, guid: 808728991a07e4f2c8a34ce1ae74b948,
         type: 3}
@@ -895,7 +895,7 @@ PrefabInstance:
     - target: {fileID: 6918805887249726029, guid: 808728991a07e4f2c8a34ce1ae74b948,
         type: 3}
       propertyPath: Messages.Array.data[0].Message
-      value: You there, you seem like an adventurer
+      value: Where am I?
       objectReference: {fileID: 0}
     - target: {fileID: 6918805887249726029, guid: 808728991a07e4f2c8a34ce1ae74b948,
         type: 3}
@@ -905,47 +905,47 @@ PrefabInstance:
     - target: {fileID: 6918805887249726029, guid: 808728991a07e4f2c8a34ce1ae74b948,
         type: 3}
       propertyPath: Messages.Array.data[1].Message
-      value: Can you help me out?
+      value: That's not important right now
       objectReference: {fileID: 0}
     - target: {fileID: 6918805887249726029, guid: 808728991a07e4f2c8a34ce1ae74b948,
         type: 3}
       propertyPath: Messages.Array.data[2].Player
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6918805887249726029, guid: 808728991a07e4f2c8a34ce1ae74b948,
         type: 3}
       propertyPath: Messages.Array.data[2].Message
-      value: Who are you?
+      value: You look like an adventurer
       objectReference: {fileID: 0}
     - target: {fileID: 6918805887249726029, guid: 808728991a07e4f2c8a34ce1ae74b948,
         type: 3}
       propertyPath: Messages.Array.data[3].Message
-      value: No time for that now
+      value: I don't remember..
       objectReference: {fileID: 0}
     - target: {fileID: 6918805887249726029, guid: 808728991a07e4f2c8a34ce1ae74b948,
         type: 3}
       propertyPath: Messages.Array.data[4].Message
-      value: They're coming
+      value: Can you help me out anyway?
       objectReference: {fileID: 0}
     - target: {fileID: 6918805887249726029, guid: 808728991a07e4f2c8a34ce1ae74b948,
         type: 3}
       propertyPath: Messages.Array.data[5].Message
-      value: They?
+      value: They're almost here
       objectReference: {fileID: 0}
     - target: {fileID: 6918805887249726029, guid: 808728991a07e4f2c8a34ce1ae74b948,
         type: 3}
       propertyPath: Messages.Array.data[6].Message
-      value: I may have angered a few townsfolk
+      value: They?
       objectReference: {fileID: 0}
     - target: {fileID: 6918805887249726029, guid: 808728991a07e4f2c8a34ce1ae74b948,
         type: 3}
       propertyPath: Messages.Array.data[7].Message
-      value: I can explain after you fight them off!
+      value: I may have angered a few townsfolk
       objectReference: {fileID: 0}
     - target: {fileID: 6918805887249726029, guid: 808728991a07e4f2c8a34ce1ae74b948,
         type: 3}
       propertyPath: Messages.Array.data[5].Player
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6918805887249726029, guid: 808728991a07e4f2c8a34ce1ae74b948,
         type: 3}
@@ -953,6 +953,26 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4192275360109049244, guid: 2f46bcfa6e1ae41828cadcf75e91e0bd,
         type: 3}
+    - target: {fileID: 6918805887249726029, guid: 808728991a07e4f2c8a34ce1ae74b948,
+        type: 3}
+      propertyPath: Messages.Array.data[0].Player
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6918805887249726029, guid: 808728991a07e4f2c8a34ce1ae74b948,
+        type: 3}
+      propertyPath: Messages.Array.data[3].Player
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6918805887249726029, guid: 808728991a07e4f2c8a34ce1ae74b948,
+        type: 3}
+      propertyPath: Messages.Array.data[6].Player
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6918805887249726029, guid: 808728991a07e4f2c8a34ce1ae74b948,
+        type: 3}
+      propertyPath: Messages.Array.data[8].Message
+      value: I'll explain after you've killed them!
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 808728991a07e4f2c8a34ce1ae74b948, type: 3}
 --- !u!1001 &8013947523314471576
