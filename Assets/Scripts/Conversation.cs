@@ -13,8 +13,8 @@ public class Conversation : MonoBehaviour
     
     public GameObject NPC;
     public float Time;
-    public Chat[] Messages;
     public string ExpectedTag;
+    public Chat[] Messages;
     
     private int _current;
     private ChatText _npcText;

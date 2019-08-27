@@ -700,70 +700,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &1499113929
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1499113933}
-  - component: {fileID: 1499113931}
-  - component: {fileID: 1499113930}
-  m_Layer: 0
-  m_Name: LizardChat
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1499113930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1499113929}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17f8cfa370f6e41bbbfd213ecf33e8b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NPC: {fileID: 3443623407502244176}
-  Time: 5
-  Messages:
-  - Player: 0
-    Message: Hello there
-  - Player: 1
-    Message: General Kenobi
---- !u!65 &1499113931
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1499113929}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 1, z: 2}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!4 &1499113933
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1499113929}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.99, y: 0.49762487, z: -1.88}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2001874272
 GameObject:
   m_ObjectHideFlags: 0
@@ -984,6 +920,140 @@ PrefabInstance:
       objectReference: {fileID: 1470828451}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28adcbf866a6c4c7c98c10458e878e04, type: 3}
+--- !u!1001 &6918805888438113159
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6918805887249726030, guid: 808728991a07e4f2c8a34ce1ae74b948,
+        type: 3}
+      propertyPath: m_Name
+      value: LizardChat
+      objectReference: {fileID: 0}
+    - target: {fileID: 6918805887249726026, guid: 808728991a07e4f2c8a34ce1ae74b948,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 6918805887249726026, guid: 808728991a07e4f2c8a34ce1ae74b948,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.49762487
+      objectReference: {fileID: 0}
+    - target: {fileID: 6918805887249726026, guid: 808728991a07e4f2c8a34ce1ae74b948,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 6918805887249726026, guid: 808728991a07e4f2c8a34ce1ae74b948,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6918805887249726026, guid: 808728991a07e4f2c8a34ce1ae74b948,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6918805887249726026, guid: 808728991a07e4f2c8a34ce1ae74b948,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6918805887249726026, guid: 808728991a07e4f2c8a34ce1ae74b948,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6918805887249726026, guid: 808728991a07e4f2c8a34ce1ae74b948,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6918805887249726026, guid: 808728991a07e4f2c8a34ce1ae74b948,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6918805887249726026, guid: 808728991a07e4f2c8a34ce1ae74b948,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6918805887249726026, guid: 808728991a07e4f2c8a34ce1ae74b948,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6918805887249726029, guid: 808728991a07e4f2c8a34ce1ae74b948,
+        type: 3}
+      propertyPath: Messages.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6918805887249726029, guid: 808728991a07e4f2c8a34ce1ae74b948,
+        type: 3}
+      propertyPath: NPC
+      value: 
+      objectReference: {fileID: 3443623407502244176}
+    - target: {fileID: 6918805887249726029, guid: 808728991a07e4f2c8a34ce1ae74b948,
+        type: 3}
+      propertyPath: Messages.Array.data[0].Message
+      value: Hey, you there! You seem like an adventurer.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6918805887249726029, guid: 808728991a07e4f2c8a34ce1ae74b948,
+        type: 3}
+      propertyPath: Messages.Array.data[1].Player
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6918805887249726029, guid: 808728991a07e4f2c8a34ce1ae74b948,
+        type: 3}
+      propertyPath: Messages.Array.data[1].Message
+      value: Could you help me out?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6918805887249726029, guid: 808728991a07e4f2c8a34ce1ae74b948,
+        type: 3}
+      propertyPath: Messages.Array.data[2].Player
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6918805887249726029, guid: 808728991a07e4f2c8a34ce1ae74b948,
+        type: 3}
+      propertyPath: Messages.Array.data[2].Message
+      value: Who are you?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6918805887249726029, guid: 808728991a07e4f2c8a34ce1ae74b948,
+        type: 3}
+      propertyPath: Messages.Array.data[3].Message
+      value: No time for that now.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6918805887249726029, guid: 808728991a07e4f2c8a34ce1ae74b948,
+        type: 3}
+      propertyPath: Messages.Array.data[4].Message
+      value: They're almost here.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6918805887249726029, guid: 808728991a07e4f2c8a34ce1ae74b948,
+        type: 3}
+      propertyPath: Messages.Array.data[5].Message
+      value: They?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6918805887249726029, guid: 808728991a07e4f2c8a34ce1ae74b948,
+        type: 3}
+      propertyPath: Messages.Array.data[6].Message
+      value: Well, I may have angered a few folks.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6918805887249726029, guid: 808728991a07e4f2c8a34ce1ae74b948,
+        type: 3}
+      propertyPath: Messages.Array.data[7].Message
+      value: I'll explain after you fight them off!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6918805887249726029, guid: 808728991a07e4f2c8a34ce1ae74b948,
+        type: 3}
+      propertyPath: Messages.Array.data[5].Player
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 808728991a07e4f2c8a34ce1ae74b948, type: 3}
 --- !u!1001 &8013947523314471576
 PrefabInstance:
   m_ObjectHideFlags: 0
