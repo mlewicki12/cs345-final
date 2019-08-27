@@ -12,8 +12,6 @@ public class PlayerController : MonoBehaviour
     public float Acceleration;
     public PlayerClass Class;
     public GameObject FireSource;
-    public Vector3 Decceleration;
-    public Vector3 MaxSpeed;
     public Vector3 SpellSpeed;
 
     public float FireTime;

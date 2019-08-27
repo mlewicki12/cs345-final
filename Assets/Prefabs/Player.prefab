@@ -42,7 +42,9 @@ GameObject:
   - component: {fileID: 6621447364538683379}
   - component: {fileID: 6621447364538683376}
   - component: {fileID: 6621447364538683377}
+  - component: {fileID: 1984928306303134204}
   - component: {fileID: 6621447364538683380}
+  - component: {fileID: 7857027708023946094}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -133,13 +135,25 @@ MonoBehaviour:
   Acceleration: 5
   Class: 0
   FireSource: {fileID: 6621447363321731511}
-  Decceleration: {x: 2, y: 0, z: 2}
-  MaxSpeed: {x: 2, y: 0, z: 2}
   SpellSpeed: {x: 0, y: 0, z: 5}
   FireTime: 0.5
   ProjectileLifeTime: 10
   MageSpell: {fileID: 7718962919052308176, guid: 07d3d0bc7a4b2433c91c6ac76660ce04,
     type: 3}
+--- !u!114 &1984928306303134204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6621447364538683374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6090c60cfa429461a920f0126a1cedbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: ???
+  MaxHealth: 100
 --- !u!54 &6621447364538683380
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -156,6 +170,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!114 &7857027708023946094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6621447364538683374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa8bfd75401fe41998595e3877ea754a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DrawCanvas: {fileID: 0}
+  HealthPrefab: {fileID: 5432595035042563157, guid: c93dd1d63b9b846d29ffecbb9104da94,
+    type: 3}
+  HealthPanelOffset: 0.95
+  HealthPanel: {fileID: 0}
 --- !u!1001 &6621447364074419326
 PrefabInstance:
   m_ObjectHideFlags: 0
