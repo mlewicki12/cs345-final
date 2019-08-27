@@ -10,8 +10,8 @@ public class ChatText : MonoBehaviour
     private HealthBar _healthBar;
     private bool _conv;
     private bool _health;
+    private Canvas _drawCanvas;
 
-    public Canvas DrawCanvas;
     public GameObject TextPrefab;
     public string DefaultText;
     public Conversation Conversation;
@@ -21,8 +21,14 @@ public class ChatText : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameObject temp = GameObject.FindWithTag("DrawCanvas");
+        if (temp != null)
+        {
+            _drawCanvas = temp.GetComponent<Canvas>();
+        }
+        
         _entity = GetComponent<EntityInfo>();
-        _uiText = Instantiate(TextPrefab, DrawCanvas.transform, false);
+        _uiText = Instantiate(TextPrefab, _drawCanvas.transform, false);
 
         _healthBar = GetComponent<HealthBar>();
         _health = (_healthBar != null);

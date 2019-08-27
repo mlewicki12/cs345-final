@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1965136527395953684
+--- !u!1 &1390768772638562096
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,70 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 668769268774010130}
-  m_Layer: 0
-  m_Name: lizard
-  m_TagString: Untagged
+  - component: {fileID: 6864805371843252093}
+  - component: {fileID: 8341902530326016428}
+  - component: {fileID: 6170117557522018432}
+  - component: {fileID: 5091330480023186212}
+  m_Layer: 8
+  m_Name: Townsfolk
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &668769268774010130
+--- !u!4 &6864805371843252093
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1965136527395953684}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.07, y: 0.07, z: 0.07}
-  m_Children:
-  - {fileID: 7114291842826468244}
-  m_Father: {fileID: 7188736729092645149}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &3443623407502244176
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7188736729092645149}
-  - component: {fileID: 5711498695874469836}
-  - component: {fileID: 7577197318180953824}
-  - component: {fileID: 8804326106461193540}
-  m_Layer: 0
-  m_Name: LizardNPC
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7188736729092645149
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3443623407502244176}
+  m_GameObject: {fileID: 1390768772638562096}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2, y: 0, z: -2.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 668769268774010130}
+  - {fileID: 3873315520464753522}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5711498695874469836
+--- !u!114 &8341902530326016428
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3443623407502244176}
+  m_GameObject: {fileID: 1390768772638562096}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dec736d694d8247b69b9df586d83b771, type: 3}
@@ -81,28 +50,29 @@ MonoBehaviour:
   TextPrefab: {fileID: 8138429498068603535, guid: 272e5dd002a15489288c5f7b27caed7f,
     type: 3}
   DefaultText: --
-  ChatPanelOffset: {x: -0.1, y: 0.75, z: 0}
---- !u!114 &7577197318180953824
+  Conversation: {fileID: 0}
+  ChatPanelOffset: {x: 0, y: 0.75, z: 0}
+--- !u!114 &6170117557522018432
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3443623407502244176}
+  m_GameObject: {fileID: 1390768772638562096}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6090c60cfa429461a920f0126a1cedbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Lizard
-  MaxHealth: -1
---- !u!136 &8804326106461193540
+  Name: Townsfolk
+  MaxHealth: 50
+--- !u!136 &5091330480023186212
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3443623407502244176}
+  m_GameObject: {fileID: 1390768772638562096}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -110,7 +80,7 @@ CapsuleCollider:
   m_Height: 0.7
   m_Direction: 1
   m_Center: {x: 0, y: 0.3, z: 0.24}
---- !u!1 &8827260254826458390
+--- !u!1 &2865033356354220660
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,45 +88,76 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7114291842826468244}
-  - component: {fileID: 1697293233731408526}
-  - component: {fileID: 3343945122876631005}
-  m_Layer: 0
+  - component: {fileID: 3873315520464753522}
+  m_Layer: 8
+  m_Name: lizard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3873315520464753522
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2865033356354220660}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.07, y: 0.07, z: 0.07}
+  m_Children:
+  - {fileID: 6790371977062684148}
+  m_Father: {fileID: 6864805371843252093}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5046159705352504182
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6790371977062684148}
+  - component: {fileID: 3101514352214932718}
+  - component: {fileID: 1364346276421945789}
+  m_Layer: 8
   m_Name: LizardPerson2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7114291842826468244
+--- !u!4 &6790371977062684148
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8827260254826458390}
+  m_GameObject: {fileID: 5046159705352504182}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 3.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 668769268774010130}
+  m_Father: {fileID: 3873315520464753522}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &1697293233731408526
+--- !u!33 &3101514352214932718
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8827260254826458390}
+  m_GameObject: {fileID: 5046159705352504182}
   m_Mesh: {fileID: -9094101941670908152, guid: 21d595c6e34fb43c0b53d6090863f09e, type: 3}
---- !u!23 &3343945122876631005
+--- !u!23 &1364346276421945789
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8827260254826458390}
+  m_GameObject: {fileID: 5046159705352504182}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1

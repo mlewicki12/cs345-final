@@ -14,6 +14,7 @@ public class Conversation : MonoBehaviour
     public GameObject NPC;
     public float Time;
     public string ExpectedTag;
+    public GameObject NextEvent;
     public Chat[] Messages;
     
     private int _current;
@@ -46,6 +47,8 @@ public class Conversation : MonoBehaviour
             CancelInvoke(nameof(DisplayMessage));
             _playerText.ClearConversation();
             _npcText.ClearConversation();
+
+            Instantiate(NextEvent);
             
             return 0;
         }
@@ -64,7 +67,7 @@ public class Conversation : MonoBehaviour
     public void Skip()
     {
         CancelInvoke(nameof(DisplayMessage));
-        DisplayMessage();
+        InvokeRepeating(nameof(DisplayMessage), 0f, Time);
     }
     
     void OnTriggerEnter(Collider other)

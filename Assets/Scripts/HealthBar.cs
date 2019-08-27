@@ -7,8 +7,8 @@ public class HealthBar : MonoBehaviour
     private EntityInfo _entity;
     private Text _name;
     private Slider _healthSlider;
+    private Canvas _drawCanvas;
 
-    public Canvas DrawCanvas;
     public GameObject HealthPrefab;
 
     public float HealthPanelOffset = 0.35f;
@@ -17,8 +17,14 @@ public class HealthBar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameObject temp = GameObject.FindWithTag("DrawCanvas");
+        if (temp != null)
+        {
+            _drawCanvas = temp.GetComponent<Canvas>();
+        }
+        
         _entity = GetComponent<EntityInfo>();
-        HealthPanel = Instantiate(HealthPrefab, DrawCanvas.transform, false);
+        HealthPanel = Instantiate(HealthPrefab, _drawCanvas.transform, false);
         HealthPanel.transform.Rotate(new Vector3(0, -180, 0));
 
         _name = HealthPanel.GetComponentInChildren<Text>();
