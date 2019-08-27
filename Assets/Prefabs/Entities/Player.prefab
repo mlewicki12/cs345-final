@@ -45,9 +45,10 @@ GameObject:
   - component: {fileID: 1984928306303134204}
   - component: {fileID: 6621447364538683380}
   - component: {fileID: 7857027708023946094}
+  - component: {fileID: -2138867575691983620}
   m_Layer: 8
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60,7 +61,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6621447364538683374}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.95, y: 0.327, z: 1.36}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 2206393854079508324}
@@ -138,6 +139,7 @@ MonoBehaviour:
   SpellSpeed: {x: 0, y: 0, z: 5}
   FireTime: 0.5
   ProjectileLifeTime: 10
+  _text: {fileID: 0}
   MageSpell: {fileID: 7718962919052308176, guid: 07d3d0bc7a4b2433c91c6ac76660ce04,
     type: 3}
 --- !u!114 &1984928306303134204
@@ -187,6 +189,24 @@ MonoBehaviour:
     type: 3}
   HealthPanelOffset: 0.95
   HealthPanel: {fileID: 0}
+--- !u!114 &-2138867575691983620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6621447364538683374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dec736d694d8247b69b9df586d83b771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DrawCanvas: {fileID: 0}
+  TextPrefab: {fileID: 8138429498068603535, guid: 272e5dd002a15489288c5f7b27caed7f,
+    type: 3}
+  DefaultText: 
+  Conversation: {fileID: 0}
+  ChatPanelOffset: {x: 0.1, y: 0.5, z: 0}
 --- !u!1001 &6621447364074419326
 PrefabInstance:
   m_ObjectHideFlags: 0

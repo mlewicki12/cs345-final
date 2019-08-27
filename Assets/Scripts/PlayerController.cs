@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     private float _timeToFire;
     private Vector3 _worldPos;
     private Vector3 _speed;
+    public ChatText _text;
 
     public GameObject MageSpell; // there's gotta be a better way to store spells
     // actually, GameObject[], allowing for players to switch spells
@@ -28,6 +29,7 @@ public class PlayerController : MonoBehaviour
     {
         _timeToFire = 0f;
         _speed = new Vector3(0, 0, 0);
+        _text = GetComponent<ChatText>();
     }
 
     // Update is called once per frame
@@ -46,10 +48,17 @@ public class PlayerController : MonoBehaviour
         _speed = new Vector3(moveX, 0, moveZ);
         transform.Translate(_speed);
 
-        if (Input.GetMouseButton(0) && _timeToFire <= 0f)
+        if (Input.GetMouseButtonDown(0))
         {
-            Fire();
-            _timeToFire = FireTime;
+            if (_text.InConversation())
+            {
+                _text.Conversation.Skip();
+            }
+            else if(_timeToFire <= 0f)
+            {
+                Fire();
+                _timeToFire = FireTime;
+            }
         }
     }
     

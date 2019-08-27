@@ -18,8 +18,7 @@ public class HealthBar : MonoBehaviour
     void Start()
     {
         _entity = GetComponent<EntityInfo>();
-        HealthPanel = Instantiate(HealthPrefab);
-        HealthPanel.transform.SetParent(DrawCanvas.transform, false);
+        HealthPanel = Instantiate(HealthPrefab, DrawCanvas.transform, false);
         HealthPanel.transform.Rotate(new Vector3(0, -180, 0));
 
         _name = HealthPanel.GetComponentInChildren<Text>();
@@ -38,5 +37,15 @@ public class HealthBar : MonoBehaviour
 
         Vector3 screenPos = Camera.main.WorldToScreenPoint(worldPos);
         HealthPanel.transform.position = screenPos;
+    }
+
+    public void Hide()
+    {
+        HealthPanel.SetActive(false);
+    }
+
+    public void Display()
+    {
+        HealthPanel.SetActive(true);
     }
 }

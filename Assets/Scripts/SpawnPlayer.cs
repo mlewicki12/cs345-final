@@ -13,5 +13,6 @@ public class SpawnPlayer : MonoBehaviour
         var player = Instantiate(PlayerPrefab, transform.position, transform.rotation);
         player.GetComponent<PlayerController>().Class = Class;
         player.GetComponent<HealthBar>().DrawCanvas = DrawCanvas;
+        player.GetComponent<ChatText>().DrawCanvas = DrawCanvas;
     }
 }
