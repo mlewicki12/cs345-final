@@ -11,7 +11,6 @@ public class TileEvent : MonoBehaviour
     public GameObject NextEvent;
 
     private GameObject _tile;
-    private bool _ran;
     
     // Start is called before the first frame update
     void Start()
@@ -19,7 +18,6 @@ public class TileEvent : MonoBehaviour
         Vector3 startPos = Position;
         startPos.y += Height;
 
-        _ran = false;
         _tile = Instantiate(Tile, startPos, Quaternion.identity);
     }
 

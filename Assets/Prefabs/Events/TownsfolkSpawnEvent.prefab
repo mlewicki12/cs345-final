@@ -47,4 +47,5 @@ MonoBehaviour:
   Amount: 3
   StartPos: {x: -6, y: 0, z: 0}
   DistanceBetween: -1
+  OffsetY: 0
   NextEvent: {fileID: 0}

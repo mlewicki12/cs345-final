@@ -8,6 +8,7 @@ public class SpawnEvent : MonoBehaviour
     
     public Vector3 StartPos;
     public float DistanceBetween;
+    public float OffsetY;
     
     public GameObject NextEvent;
 
@@ -19,6 +20,7 @@ public class SpawnEvent : MonoBehaviour
         {
             Vector3 pos = StartPos;
             pos.x += xAdd;
+            pos.y += OffsetY;
             
             Instantiate(Enemy, pos, Quaternion.identity);
             xAdd += DistanceBetween;
