@@ -5,6 +5,7 @@ public class SpawnEvent : MonoBehaviour
 {
     public GameObject Enemy;
     public int Amount;
+    public string Name;
     
     public Vector3 StartPos;
     public float DistanceBetween;
@@ -27,6 +28,8 @@ public class SpawnEvent : MonoBehaviour
             pos.y += OffsetY;
             
             _enemies[i] = Instantiate(Enemy, pos, Quaternion.identity);
+            _enemies[i].name = $"{Name}{i}";
+            
             xAdd += DistanceBetween;
         }
 

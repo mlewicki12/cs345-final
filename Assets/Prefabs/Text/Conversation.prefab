@@ -60,4 +60,6 @@ MonoBehaviour:
   NPC: {fileID: 0}
   Time: 2.5
   ExpectedTag: Player
+  NextEvent: {fileID: 0}
+  Active: 1
   Messages: []
