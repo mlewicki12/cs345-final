@@ -16,6 +16,7 @@ public class Conversation : MonoBehaviour
     public string ExpectedTag;
     public GameObject NextEvent;
     public Chat[] Messages;
+    public bool Active;
     
     private int _current;
     private ChatText _npcText;
@@ -24,7 +25,11 @@ public class Conversation : MonoBehaviour
 
     void Start()
     {
-        _npcText = NPC.GetComponent<ChatText>();
+        if (NPC != null)
+        {
+            _npcText = NPC.GetComponent<ChatText>();
+        }
+
         _triggered = false;
     }
 
@@ -48,8 +53,11 @@ public class Conversation : MonoBehaviour
             _playerText.ClearConversation();
             _npcText.ClearConversation();
 
-            Instantiate(NextEvent);
-            
+            if (NextEvent != null)
+            {
+                Instantiate(NextEvent);
+            }
+
             return 0;
         }
         
@@ -72,12 +80,19 @@ public class Conversation : MonoBehaviour
     
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag(ExpectedTag) && !_triggered)
+        if (Active && other.gameObject.CompareTag(ExpectedTag) && !_triggered)
         {
-            _playerText = other.gameObject.GetComponent<ChatText>();
-            _triggered = true; // REEEEEEEE
-            
-            BeginConversation();
+            Begin(_npcText, other.gameObject.GetComponent<ChatText>());
         }
+    }
+
+    public void Begin(ChatText first, ChatText other)
+    {
+        _npcText = first;
+        _playerText = other;
+
+        _triggered = true; // REEEEEE
+        
+        BeginConversation();
     }
 }

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8218970179721438248
+--- !u!1 &6180349915537529269
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2364898077337051864}
-  - component: {fileID: 757694031549782441}
+  - component: {fileID: 664721495535733935}
+  - component: {fileID: 6547533277545828172}
   m_Layer: 0
-  m_Name: TownsfolkSpawnEvent
+  m_Name: CameraZoomIn5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2364898077337051864
+--- !u!4 &664721495535733935
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8218970179721438248}
+  m_GameObject: {fileID: 6180349915537529269}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,23 +31,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &757694031549782441
+--- !u!114 &6547533277545828172
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8218970179721438248}
+  m_GameObject: {fileID: 6180349915537529269}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f3c7fd2fb7e646788507f5018653f61, type: 3}
+  m_Script: {fileID: 11500000, guid: eb067e1d4831a4706ae66028acebe6bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy: {fileID: 1390768772638562096, guid: 2d3e923bd73b642d4947cced0041415a, type: 3}
-  Amount: 3
-  StartPos: {x: -6, y: 0, z: 0}
-  DistanceBetween: -1
-  OffsetY: 0
-  NextEvent: {fileID: 0}
-  OnDeathEvent: {fileID: 6180349915537529269, guid: 0bd99f3277c994c24870050baa16724b,
+  DesiredZoom: 5
+  Speed: -0.5
+  NextEvent: {fileID: 8815072921874653163, guid: 3fcb23e37e39a4d0589cf437f43fa531,
     type: 3}

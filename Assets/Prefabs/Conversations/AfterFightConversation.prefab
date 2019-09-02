@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8815072921874653163
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8815072921874653142}
+  - component: {fileID: 8815072921874653161}
+  - component: {fileID: 8815072921874653160}
+  m_Layer: 0
+  m_Name: AfterFightConversation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8815072921874653142
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8815072921874653163}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8815072921874653161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8815072921874653163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17f8cfa370f6e41bbbfd213ecf33e8b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPC: {fileID: 0}
+  Time: 2.5
+  ExpectedTag: 
+  NextEvent: {fileID: 0}
+  Messages:
+  - Player: 0
+    Message: Thank you!!
+  - Player: 1
+    Message: Now can you tell me who I am?
+  - Player: 0
+    Message: How should I know?
+  - Player: 0
+    Message: You just appeared in front of me
+  - Player: 1
+    Message: Can you at least tell me where to find some answers?
+  - Player: 0
+    Message: That forest lit up really weirdly earlier
+  - Player: 1
+    Message: I'll check it out
+  Active: 0
+--- !u!114 &8815072921874653160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8815072921874653163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ad306b65d10a45ab90fe4f4357caa06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FirstName: TutorialLizard
+  SecondName: Player

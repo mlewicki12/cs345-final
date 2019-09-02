@@ -500,7 +500,7 @@ PrefabInstance:
     - target: {fileID: 3443623407502244176, guid: 1d2240158a45d481695a88cf0dca16d9,
         type: 3}
       propertyPath: m_Name
-      value: NPC
+      value: TutorialLizard
       objectReference: {fileID: 0}
     - target: {fileID: 7188736729092645149, guid: 1d2240158a45d481695a88cf0dca16d9,
         type: 3}
@@ -1061,7 +1061,7 @@ PrefabInstance:
         type: 3}
       propertyPath: NextEvent
       value: 
-      objectReference: {fileID: 4192275360109049244, guid: 2f46bcfa6e1ae41828cadcf75e91e0bd,
+      objectReference: {fileID: 4694975881446546616, guid: 91613d368652a4451b4462bca60bd2e5,
         type: 3}
     - target: {fileID: 6918805887249726029, guid: 808728991a07e4f2c8a34ce1ae74b948,
         type: 3}
