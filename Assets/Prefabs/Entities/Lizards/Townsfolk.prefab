@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -3468986134243990417}
   m_Layer: 8
   m_Name: Townsfolk
-  m_TagString: NPC
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -206,7 +206,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5046159705352504182}
-  m_Mesh: {fileID: -9094101941670908152, guid: 21d595c6e34fb43c0b53d6090863f09e, type: 3}
+  m_Mesh: {fileID: 469765873296492527, guid: 21d595c6e34fb43c0b53d6090863f09e, type: 3}
 --- !u!23 &1364346276421945789
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -224,7 +224,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -319764935661403879, guid: 21d595c6e34fb43c0b53d6090863f09e, type: 3}
+  - {fileID: 2100000, guid: 1235ded99bdfa4990a49ab423f692293, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

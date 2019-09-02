@@ -57,7 +57,7 @@ public class EntityInfo : MonoBehaviour
             var spell = other.gameObject.GetComponent<Projectile>();
             InflictDamage(spell.Damage);
         }
-        else if (other.gameObject.CompareTag("Player"))
+        else if (other.gameObject.CompareTag("Enemy"))
         {
             var info = other.gameObject.GetComponent<EntityInfo>();
             info.InflictDamage(Damage);

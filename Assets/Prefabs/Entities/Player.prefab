@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1832b8b56c385409285e949e8d509d1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Acceleration: 5
+  Acceleration: 4
   Class: 0
   FireSource: {fileID: 6621447363321731511}
   SpellSpeed: {x: 0, y: 0, z: 5}
@@ -156,6 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: ???
   MaxHealth: 100
+  Damage: 0
 --- !u!54 &6621447364538683380
 Rigidbody:
   m_ObjectHideFlags: 0

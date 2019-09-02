@@ -44,8 +44,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Height: 5
-  Speed: 0.5
-  Tile: {fileID: 1215438129482617806, guid: e10c1bdc6ce414cd98c8be41ee1eccf4, type: 3}
-  Position: {x: -10, y: 0, z: 0}
+  Speed: 0.3
+  Tiles:
+  - {fileID: 8379000359814715188, guid: 6ff70182a60244773a66a6ce864e496c, type: 3}
+  - {fileID: 8379000359814715188, guid: 6ff70182a60244773a66a6ce864e496c, type: 3}
+  - {fileID: 8379000359814715188, guid: 6ff70182a60244773a66a6ce864e496c, type: 3}
+  - {fileID: 6394804189415463048, guid: 34762112b5384412a8fb961782a3752c, type: 3}
+  - {fileID: 996811617222337685, guid: 7b037b1d374094cc0a1c36c39db2ea43, type: 3}
+  - {fileID: 8379000359814715188, guid: 6ff70182a60244773a66a6ce864e496c, type: 3}
+  Position:
+  - {x: 10, y: 0, z: -10}
+  - {x: 0, y: 0, z: -10}
+  - {x: -10, y: 0, z: -10}
+  - {x: -10, y: 0, z: 0}
+  - {x: 10, y: 0, z: 0}
+  - {x: -10, y: 0, z: 10}
   NextEvent: {fileID: 8218970179721438248, guid: 194776475f3be41a8aee8ff1989f6bb8,
     type: 3}
+  NewSize: 10

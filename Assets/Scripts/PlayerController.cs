@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿
+using System;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -20,7 +19,8 @@ public class PlayerController : MonoBehaviour
     private float _timeToFire;
     private Vector3 _worldPos;
     private Vector3 _speed;
-    public ChatText _text;
+    private ChatText _text;
+    private Rigidbody _rigidbody;
 
     public GameObject MageSpell; // there's gotta be a better way to store spells
     // actually, GameObject[], allowing for players to switch spells
@@ -30,12 +30,14 @@ public class PlayerController : MonoBehaviour
         _timeToFire = 0f;
         _speed = new Vector3(0, 0, 0);
         _text = GetComponent<ChatText>();
+        _rigidbody = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
         _timeToFire = Math.Max(0f, _timeToFire - Time.deltaTime);
+        _rigidbody.velocity = new Vector3(0, 0, 0);
         
         FollowMouse();
         

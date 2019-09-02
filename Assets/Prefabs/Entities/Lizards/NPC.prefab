@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 7577197318180953824}
   - component: {fileID: 8804326106461193540}
   m_Layer: 8
-  m_Name: LizardNPC
+  m_Name: NPC
   m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +77,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec736d694d8247b69b9df586d83b771, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DrawCanvas: {fileID: 0}
   TextPrefab: {fileID: 8138429498068603535, guid: 272e5dd002a15489288c5f7b27caed7f,
     type: 3}
   DefaultText: --
@@ -97,6 +96,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Lizard
   MaxHealth: -1
+  Damage: 0
 --- !u!136 &8804326106461193540
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -150,7 +150,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8827260254826458390}
-  m_Mesh: {fileID: -9094101941670908152, guid: 21d595c6e34fb43c0b53d6090863f09e, type: 3}
+  m_Mesh: {fileID: 469765873296492527, guid: 21d595c6e34fb43c0b53d6090863f09e, type: 3}
 --- !u!23 &3343945122876631005
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -168,7 +168,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -319764935661403879, guid: 21d595c6e34fb43c0b53d6090863f09e, type: 3}
+  - {fileID: 2100000, guid: 1235ded99bdfa4990a49ab423f692293, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
