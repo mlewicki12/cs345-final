@@ -9,10 +9,22 @@ public class PlayerController : MonoBehaviour
         Knight
     }
 
+    [Serializable]
+    public class PlayerControls
+    {
+        public KeyCode forward;
+        public KeyCode back;
+        public KeyCode left;
+        public KeyCode right;
+    }
+
     public float Speed;
+    public float RotationSpeed;
     public PlayerClass Class;
     public GameObject FireSource;
     public Vector3 SpellSpeed;
+    public PlayerControls MageControls;
+    public PlayerControls KnightControls;
 
     public float LookRange;
     public float FireTime;
@@ -39,24 +51,7 @@ public class PlayerController : MonoBehaviour
         _timeToFire = Math.Max(0f, _timeToFire - Time.deltaTime);
         _rigidbody.velocity = new Vector3(0, 0, 0);
 
-        float[] move;
-        if (Class == PlayerClass.Mage)
-        {
-            move = GetMove(KeyCode.UpArrow, KeyCode.DownArrow, KeyCode.LeftArrow, KeyCode.RightArrow);
-            
-            transform.Translate(new Vector3(move[1], 0, move[0]));
-            FollowMouse();
-        }
-        else
-        {
-            move = GetMove(KeyCode.W, KeyCode.S, KeyCode.A, KeyCode.D);
-            Vector3 toPoint = new Vector3(move[1], 0, move[0]);
-            
-            transform.Translate(toPoint);
-            
-            transform.LookAt(transform.position + GetNewDir(toPoint));
-        }
-
+        GetMove();
             
         if (Input.GetMouseButtonDown(0))
         {
@@ -109,55 +104,62 @@ public class PlayerController : MonoBehaviour
         Destroy(spell, ProjectileLifeTime);
     }
 
-    float[] GetMove(KeyCode forward, KeyCode back, KeyCode left, KeyCode right)
+    void GetMove()
     {
+        float[] move;
+        if (Class == PlayerClass.Mage)
+        {
+            move = GetDirections(MageControls);
+            transform.Translate(new Vector3(move[0], 0, move[1]));
+            
+            FollowMouse();
+        }
+        else
+        {
+            move = GetDirections(KnightControls);
+            transform.Translate(new Vector3(0, 0, move[1]));
+
+            if (move[0] > 0)
+            {
+                transform.Rotate(new Vector3(0, 1, 0), RotationSpeed);
+            } else if (move[0] < 0)
+            {
+                transform.Rotate(new Vector3(0, 1, 0), -RotationSpeed);
+            }
+        }
+    }
+
+    float[] GetDirections(PlayerControls controls)
+    {
+        KeyCode forward = controls.forward, back = controls.back,
+            left = controls.left, right = controls.right;
+        
         var ret = new float[2];
+        
         ret[0] = ret[1] = 0.0f;
 
-        if (Input.GetKey(forward))
+        if (Input.GetKey(right))
         {
             ret[0] += Speed;
         }
 
-        if (Input.GetKey(back))
+        if (Input.GetKey(left))
         {
             ret[0] -= Speed;
         }
-
-        if (Input.GetKey(right))
+        
+        if (Input.GetKey(forward))
         {
             ret[1] += Speed;
         }
 
-        if (Input.GetKey(left))
+        if (Input.GetKey(back))
         {
             ret[1] -= Speed;
         }
 
         ret[0] *= Time.deltaTime;
         ret[1] *= Time.deltaTime;
-        
-        return ret;
-    }
-
-    Vector3 GetNewDir(Vector3 point)
-    {
-        Vector3 ret = new Vector3(0, 0, 0);
-        if (point.x < 0)
-        {
-            ret.x = 1;
-        } else if (point.x < 0)
-        {
-            ret.x = -1;
-        }
-
-        if (point.z < 0)
-        {
-            ret.z = 1;
-        } else if (point.z > 0)
-        {
-            ret.z = -1;
-        }
 
         return ret;
     }

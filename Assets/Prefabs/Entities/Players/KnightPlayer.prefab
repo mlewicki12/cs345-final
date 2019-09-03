@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 7814299555510622273}
   m_Layer: 0
   m_Name: KnightPlayer
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65,7 +65,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!114 &-1909862077453820548
 MonoBehaviour:
@@ -95,9 +95,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 2
+  RotationSpeed: 5
   Class: 1
   FireSource: {fileID: 0}
   SpellSpeed: {x: 0, y: 0, z: 0}
+  MageControls:
+    forward: 0
+    back: 0
+    left: 0
+    right: 0
+  KnightControls:
+    forward: 119
+    back: 115
+    left: 97
+    right: 100
+  LookRange: 0
   FireTime: 0
   ProjectileLifeTime: 0
   MageSpell: {fileID: 0}
@@ -115,8 +127,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HealthPrefab: {fileID: 5432595035042563157, guid: c93dd1d63b9b846d29ffecbb9104da94,
     type: 3}
+  TextPrefab: {fileID: 8138429498068603535, guid: 272e5dd002a15489288c5f7b27caed7f,
+    type: 3}
   HealthPanelOffset: 1.75
+  NameTextOffset: 1.25
   HealthPanel: {fileID: 0}
+  NameText: {fileID: 0}
 --- !u!114 &7814299555510622273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,7 +149,7 @@ MonoBehaviour:
     type: 3}
   DefaultText: 
   Conversation: {fileID: 0}
-  ChatPanelOffset: {x: 1.75, y: 0, z: 0}
+  ChatPanelOffset: {x: 0, y: 1, z: 0}
 --- !u!1001 &2785551326962882616
 PrefabInstance:
   m_ObjectHideFlags: 0

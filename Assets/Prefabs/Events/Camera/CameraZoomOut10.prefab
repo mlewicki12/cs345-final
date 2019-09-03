@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb067e1d4831a4706ae66028acebe6bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DesiredZoom: 10
+  DesiredZoom: 7
   Speed: 0.5
   NextEvent: {fileID: 4192275360109049244, guid: 2f46bcfa6e1ae41828cadcf75e91e0bd,
     type: 3}

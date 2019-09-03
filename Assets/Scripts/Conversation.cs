@@ -38,6 +38,13 @@ public class Conversation : MonoBehaviour
         _current = 0;
         _playerText.SetConversation(this);
         _npcText.SetConversation(this);
+
+        if (_playerText.gameObject.name == "KnightPlayer" ||
+            _playerText.gameObject.name == "MagePlayer")
+        {
+            GameObject.Find("KnightPlayer").GetComponent<ChatText>().SetConversation(this);
+            GameObject.Find("MagePlayer").GetComponent<ChatText>().SetConversation(this);
+        }
         
         InvokeRepeating(nameof(DisplayMessage), 0f, Time);
     }
@@ -53,6 +60,13 @@ public class Conversation : MonoBehaviour
             _playerText.ClearConversation();
             _npcText.ClearConversation();
 
+            if (_playerText.gameObject.name == "KnightPlayer" ||
+                _playerText.gameObject.name == "MagePlayer")
+            {
+                GameObject.Find("KnightPlayer").GetComponent<ChatText>().ClearConversation();
+                GameObject.Find("MagePlayer").GetComponent<ChatText>().ClearConversation();
+            }
+            
             if (NextEvent != null)
             {
                 Instantiate(NextEvent);

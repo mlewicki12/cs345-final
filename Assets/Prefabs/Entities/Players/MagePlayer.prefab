@@ -133,10 +133,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1832b8b56c385409285e949e8d509d1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 4
+  Speed: 3
+  RotationSpeed: 0
   Class: 0
   FireSource: {fileID: 6621447363321731511}
   SpellSpeed: {x: 0, y: 0, z: 5}
+  MageControls:
+    forward: 273
+    back: 274
+    left: 276
+    right: 275
+  KnightControls:
+    forward: 0
+    back: 0
+    left: 0
+    right: 0
   LookRange: 0.4
   FireTime: 0.5
   ProjectileLifeTime: 10
@@ -187,8 +198,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HealthPrefab: {fileID: 5432595035042563157, guid: c93dd1d63b9b846d29ffecbb9104da94,
     type: 3}
+  TextPrefab: {fileID: 8138429498068603535, guid: 272e5dd002a15489288c5f7b27caed7f,
+    type: 3}
   HealthPanelOffset: 1.1
+  NameTextOffset: 0.6
   HealthPanel: {fileID: 0}
+  NameText: {fileID: 0}
 --- !u!114 &-2138867575691983620
 MonoBehaviour:
   m_ObjectHideFlags: 0
