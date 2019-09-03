@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Duo Quest UI", "Duo Quest UI.csproj", "{9D931575-8D10-01B7-2652-E016B7689165}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Duo Quest UI.Editor", "Duo Quest UI.Editor.csproj", "{BEFEB924-73B0-C792-FDAD-2E3DA5B19867}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9D931575-8D10-01B7-2652-E016B7689165}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D931575-8D10-01B7-2652-E016B7689165}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D931575-8D10-01B7-2652-E016B7689165}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D931575-8D10-01B7-2652-E016B7689165}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEFEB924-73B0-C792-FDAD-2E3DA5B19867}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEFEB924-73B0-C792-FDAD-2E3DA5B19867}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEFEB924-73B0-C792-FDAD-2E3DA5B19867}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEFEB924-73B0-C792-FDAD-2E3DA5B19867}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0CC67993-AAB2-43EA-8868-EFB67C604CAF}
+	EndGlobalSection
+EndGlobal
