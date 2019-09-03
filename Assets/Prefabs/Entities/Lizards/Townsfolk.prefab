@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -5648548706698367757}
   - component: {fileID: -1991512176145135889}
   - component: {fileID: -3468986134243990417}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Townsfolk
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3873315520464753522}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: lizard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 6790371977062684148}
   - component: {fileID: 3101514352214932718}
   - component: {fileID: 1364346276421945789}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: LizardPerson2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

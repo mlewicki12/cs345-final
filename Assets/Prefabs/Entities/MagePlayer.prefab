@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 7857027708023946094}
   - component: {fileID: -2138867575691983620}
   m_Layer: 8
-  m_Name: Player
+  m_Name: MagePlayer
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -133,13 +133,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1832b8b56c385409285e949e8d509d1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Acceleration: 4
+  Speed: 4
   Class: 0
   FireSource: {fileID: 6621447363321731511}
   SpellSpeed: {x: 0, y: 0, z: 5}
+  LookRange: 0.4
   FireTime: 0.5
   ProjectileLifeTime: 10
-  _text: {fileID: 0}
   MageSpell: {fileID: 7718962919052308176, guid: 07d3d0bc7a4b2433c91c6ac76660ce04,
     type: 3}
 --- !u!114 &1984928306303134204
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6090c60cfa429461a920f0126a1cedbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: ???
+  Name: Lotus
   MaxHealth: 100
   Damage: 0
 --- !u!54 &6621447364538683380

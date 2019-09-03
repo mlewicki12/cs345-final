@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8815072921874653142}
-  - component: {fileID: 8815072921874653161}
   - component: {fileID: 8815072921874653160}
+  - component: {fileID: 8815072921874653161}
   m_Layer: 0
   m_Name: AfterFightConversation
   m_TagString: Untagged
@@ -32,6 +32,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8815072921874653160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8815072921874653163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ad306b65d10a45ab90fe4f4357caa06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FirstName: TutorialLizard
+  SecondName: MagePlayer
 --- !u!114 &8815072921874653161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48,6 +62,7 @@ MonoBehaviour:
   Time: 2.5
   ExpectedTag: 
   NextEvent: {fileID: 0}
+  Active: 0
   Messages:
   - Player: 0
     Message: Thank you!!
@@ -63,18 +78,3 @@ MonoBehaviour:
     Message: That forest lit up really weirdly earlier
   - Player: 1
     Message: I'll check it out
-  Active: 0
---- !u!114 &8815072921874653160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8815072921874653163}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ad306b65d10a45ab90fe4f4357caa06, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FirstName: TutorialLizard
-  SecondName: Player

@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9853928f2a324ea0a3029914643e8fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Class: 0
-  PlayerPrefab: {fileID: 6621447364538683374, guid: ede19a28bb08c466bbf7747cf144d110,
+  MagePrefab: {fileID: 6621447364538683374, guid: ede19a28bb08c466bbf7747cf144d110,
     type: 3}
-  DrawCanvas: {fileID: 0}
+  KnightPrefab: {fileID: 8294913914027801249, guid: 5c62398268591486fb339b6b552f7e9d,
+    type: 3}

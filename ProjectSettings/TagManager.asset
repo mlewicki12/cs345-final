@@ -19,11 +19,11 @@ TagManager:
   - 
   - 
   - Player
-  - Destroyed
+  - Entity
   - Projectile
   - Mouse
   - Ground
-  - 
+  - Destroyed
   - 
   - 
   - 
