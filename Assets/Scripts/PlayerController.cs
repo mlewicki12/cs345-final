@@ -34,7 +34,6 @@ public class PlayerController : MonoBehaviour
     private float _timeToFire;
     private Vector3 _worldPos;
     private ChatText _text;
-    private Rigidbody _rigidbody;
     private EntityInfo _info;
 
     public GameObject MageSpell; // there's gotta be a better way to store spells
@@ -44,7 +43,6 @@ public class PlayerController : MonoBehaviour
     {
         _timeToFire = 0f;
         _text = GetComponent<ChatText>();
-        _rigidbody = GetComponent<Rigidbody>();
         _info = GetComponent<EntityInfo>();
     }
 

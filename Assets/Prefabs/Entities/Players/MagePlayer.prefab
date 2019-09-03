@@ -148,8 +148,10 @@ MonoBehaviour:
     back: 0
     left: 0
     right: 0
+  OnDeathEvent: {fileID: 6540143031317429325, guid: a853a574d16524712a825e116249f24c,
+    type: 3}
   LookRange: 0.4
-  FireTime: 0.5
+  AttackSpeed: 0
   ProjectileLifeTime: 10
   MageSpell: {fileID: 7718962919052308176, guid: 07d3d0bc7a4b2433c91c6ac76660ce04,
     type: 3}
