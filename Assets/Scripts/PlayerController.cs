@@ -25,15 +25,17 @@ public class PlayerController : MonoBehaviour
     public Vector3 SpellSpeed;
     public PlayerControls MageControls;
     public PlayerControls KnightControls;
+    public GameObject OnDeathEvent;
 
     public float LookRange;
-    public float FireTime;
+    public float AttackSpeed;
     public float ProjectileLifeTime;
     
     private float _timeToFire;
     private Vector3 _worldPos;
     private ChatText _text;
     private Rigidbody _rigidbody;
+    private EntityInfo _info;
 
     public GameObject MageSpell; // there's gotta be a better way to store spells
     // actually, GameObject[], allowing for players to switch spells
@@ -43,11 +45,22 @@ public class PlayerController : MonoBehaviour
         _timeToFire = 0f;
         _text = GetComponent<ChatText>();
         _rigidbody = GetComponent<Rigidbody>();
+        _info = GetComponent<EntityInfo>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (_info.Dead())
+        {
+            if (OnDeathEvent != null)
+            {
+                Instantiate(OnDeathEvent);
+            }
+            
+            Destroy(gameObject);
+        }
+        
         _timeToFire = Math.Max(0f, _timeToFire - Time.deltaTime);
 
         GetMove();
@@ -61,7 +74,7 @@ public class PlayerController : MonoBehaviour
             else if(_timeToFire <= 0f)
             {
                 Fire();
-                _timeToFire = FireTime;
+                _timeToFire = AttackSpeed;
             }
         }
     }

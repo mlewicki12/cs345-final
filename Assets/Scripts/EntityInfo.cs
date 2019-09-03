@@ -39,14 +39,16 @@ public class EntityInfo : MonoBehaviour
         return _health;
     }
 
-    public int InflictDamage(int dmg)
+    public void InflictDamage(int dmg)
     {
-        if (MaxHealth == -1)
+        if (MaxHealth != -1)
         {
-            return -1;
+            _health -= dmg;
         }
-        
-        _health -= dmg;
-        return _health;
+    }
+
+    public bool Dead()
+    {
+        return _dead;
     }
 }
