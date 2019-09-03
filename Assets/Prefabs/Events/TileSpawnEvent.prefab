@@ -54,10 +54,10 @@ MonoBehaviour:
   - {fileID: 4908615834199182444, guid: fa10741e8a540414eaac4755f7ffafa6, type: 3}
   Position:
   - {x: 10, y: 0, z: -10}
-  - {x: 0, y: 0, z: -10}
+  - {x: -10, y: 0, z: 10}
   - {x: -10, y: 0, z: -10}
   - {x: -10, y: 0, z: 0}
   - {x: 10, y: 0, z: 0}
-  - {x: -10, y: 0, z: 10}
+  - {x: 0, y: 0, z: -10}
   NextEvent: {fileID: 8218970179721438248, guid: 194776475f3be41a8aee8ff1989f6bb8,
     type: 3}

@@ -1,5 +1,63 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &362384179332866852
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4388508414375023727}
+  - component: {fileID: 8253060842462432298}
+  - component: {fileID: 1450982838885765747}
+  m_Layer: 0
+  m_Name: TileSpawnTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4388508414375023727
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362384179332866852}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -4.05}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4908615834199182445}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8253060842462432298
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362384179332866852}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 2, z: 1}
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &1450982838885765747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362384179332866852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6007b2e273dfb4465aecd7d80c535db7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 4291113058749218377, guid: 5f79df0c7b3f0431ab7b192a17e43a3b, type: 3}
 --- !u!1 &4908615834199182444
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,7 +68,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4908615834199182445}
   m_Layer: 0
-  m_Name: ForestTile3 1
+  m_Name: ForestTile4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34,6 +92,7 @@ Transform:
   - {fileID: 3354021908289818180}
   - {fileID: 1005833202980340805}
   - {fileID: 6584603979902614638}
+  - {fileID: 4388508414375023727}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -228,11 +287,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4908615834199182445}
     m_Modifications:
-    - target: {fileID: 6338572880019958441, guid: dac1edbde5df04276bad3619e874a20b,
-        type: 3}
-      propertyPath: m_Name
-      value: ForestTree2
-      objectReference: {fileID: 0}
     - target: {fileID: 7038136293906536634, guid: dac1edbde5df04276bad3619e874a20b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -288,6 +342,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6338572880019958441, guid: dac1edbde5df04276bad3619e874a20b,
+        type: 3}
+      propertyPath: m_Name
+      value: ForestTree2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dac1edbde5df04276bad3619e874a20b, type: 3}
 --- !u!4 &7386158227651101385 stripped
@@ -303,11 +362,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4908615834199182445}
     m_Modifications:
-    - target: {fileID: 6338572880019958441, guid: dac1edbde5df04276bad3619e874a20b,
-        type: 3}
-      propertyPath: m_Name
-      value: ForestTree4
-      objectReference: {fileID: 0}
     - target: {fileID: 7038136293906536634, guid: dac1edbde5df04276bad3619e874a20b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -363,6 +417,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6338572880019958441, guid: dac1edbde5df04276bad3619e874a20b,
+        type: 3}
+      propertyPath: m_Name
+      value: ForestTree4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dac1edbde5df04276bad3619e874a20b, type: 3}
 --- !u!4 &3354021908289818180 stripped
@@ -378,11 +437,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4908615834199182445}
     m_Modifications:
-    - target: {fileID: 6338572880019958441, guid: dac1edbde5df04276bad3619e874a20b,
-        type: 3}
-      propertyPath: m_Name
-      value: ForestTree5
-      objectReference: {fileID: 0}
     - target: {fileID: 7038136293906536634, guid: dac1edbde5df04276bad3619e874a20b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -438,6 +492,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6338572880019958441, guid: dac1edbde5df04276bad3619e874a20b,
+        type: 3}
+      propertyPath: m_Name
+      value: ForestTree5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dac1edbde5df04276bad3619e874a20b, type: 3}
 --- !u!4 &1005833202980340805 stripped
@@ -453,11 +512,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4908615834199182445}
     m_Modifications:
-    - target: {fileID: 6338572880019958441, guid: dac1edbde5df04276bad3619e874a20b,
-        type: 3}
-      propertyPath: m_Name
-      value: ForestTree1
-      objectReference: {fileID: 0}
     - target: {fileID: 7038136293906536634, guid: dac1edbde5df04276bad3619e874a20b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -513,6 +567,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6338572880019958441, guid: dac1edbde5df04276bad3619e874a20b,
+        type: 3}
+      propertyPath: m_Name
+      value: ForestTree1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dac1edbde5df04276bad3619e874a20b, type: 3}
 --- !u!4 &1254503215887514889 stripped
@@ -528,11 +587,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4908615834199182445}
     m_Modifications:
-    - target: {fileID: 5521266741128760455, guid: 5749466dd8ac94e06887702e07437f81,
-        type: 3}
-      propertyPath: m_Name
-      value: PineTree (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 3276824969133807531, guid: 5749466dd8ac94e06887702e07437f81,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -587,6 +641,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5521266741128760455, guid: 5749466dd8ac94e06887702e07437f81,
+        type: 3}
+      propertyPath: m_Name
+      value: PineTree (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5749466dd8ac94e06887702e07437f81, type: 3}

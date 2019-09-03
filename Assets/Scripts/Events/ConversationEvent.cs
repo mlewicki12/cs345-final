@@ -9,7 +9,7 @@ public class ConversationEvent : MonoBehaviour
 
     private Conversation _conv;
 
-    private void Start()
+    void Start()
     {
         _conv = gameObject.GetComponent<Conversation>();
 

@@ -26,7 +26,7 @@ public class TileEvent : MonoBehaviour
             startPos = Position[i];
             startPos.y += Height;
             
-            _tiles[i] = Instantiate(Tiles[i], startPos, Quaternion.identity);
+            _tiles[i] = Instantiate(Tiles[i], startPos, Tiles[i].transform.rotation);
             _done[i] = false;
         }
     }
