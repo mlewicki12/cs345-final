@@ -47,11 +47,11 @@ MonoBehaviour:
   Speed: 0.3
   Tiles:
   - {fileID: 8379000359814715188, guid: 6ff70182a60244773a66a6ce864e496c, type: 3}
-  - {fileID: 8379000359814715188, guid: 6ff70182a60244773a66a6ce864e496c, type: 3}
-  - {fileID: 8379000359814715188, guid: 6ff70182a60244773a66a6ce864e496c, type: 3}
+  - {fileID: 3724303277016970642, guid: d87ee3b6c86904b4da12a9267fa33838, type: 3}
+  - {fileID: 5617722075179176300, guid: 8fd2aaf6b97344a4aa9a050573f1d4c5, type: 3}
   - {fileID: 6394804189415463048, guid: 34762112b5384412a8fb961782a3752c, type: 3}
-  - {fileID: 996811617222337685, guid: 7b037b1d374094cc0a1c36c39db2ea43, type: 3}
-  - {fileID: 8379000359814715188, guid: 6ff70182a60244773a66a6ce864e496c, type: 3}
+  - {fileID: 2035888804819718368, guid: 7b037b1d374094cc0a1c36c39db2ea43, type: 3}
+  - {fileID: 4908615834199182444, guid: fa10741e8a540414eaac4755f7ffafa6, type: 3}
   Position:
   - {x: 10, y: 0, z: -10}
   - {x: 0, y: 0, z: -10}
@@ -61,4 +61,3 @@ MonoBehaviour:
   - {x: -10, y: 0, z: 10}
   NextEvent: {fileID: 8218970179721438248, guid: 194776475f3be41a8aee8ff1989f6bb8,
     type: 3}
-  NewSize: 10
