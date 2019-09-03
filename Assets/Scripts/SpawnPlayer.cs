@@ -24,5 +24,7 @@ public class SpawnPlayer : MonoBehaviour
         player.GetComponent<PlayerController>().Class = PlayerController.PlayerClass.Knight;
         player.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
         player.name = "KnightPlayer";
+        
+        Camera.main.GetComponent<CameraController>().GetPlayers();
     }
 }
