@@ -49,7 +49,6 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         _timeToFire = Math.Max(0f, _timeToFire - Time.deltaTime);
-        _rigidbody.velocity = new Vector3(0, 0, 0);
 
         GetMove();
             

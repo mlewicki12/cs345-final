@@ -48,3 +48,4 @@ MonoBehaviour:
   KnightPrefab: {fileID: 8294913914027801249, guid: 5c62398268591486fb339b6b552f7e9d,
     type: 3}
   MageOffset: 0.35
+  KnightOffset: 1.5

@@ -9,7 +9,6 @@ public class TileEvent : MonoBehaviour
     public GameObject[] Tiles;
     public Vector3[] Position;
     public GameObject NextEvent;
-    public float NewSize;
 
     private GameObject[] _tiles;
     private bool[] _done;
@@ -17,8 +16,6 @@ public class TileEvent : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Camera.main.orthographicSize = NewSize;
-            
         Vector3 startPos;
 
         _tiles = new GameObject[Tiles.Length];

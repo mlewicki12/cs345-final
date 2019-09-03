@@ -7,6 +7,7 @@ public class SpawnPlayer : MonoBehaviour
     public GameObject KnightPrefab;
 
     public float MageOffset;
+    public float KnightOffset;
     
     // Start is called before the first frame update
     void Start()
@@ -16,10 +17,12 @@ public class SpawnPlayer : MonoBehaviour
 
         var player = Instantiate(MagePrefab, position + new Vector3(0, MageOffset, 0), rotation);
         player.GetComponent<PlayerController>().Class = PlayerController.PlayerClass.Mage;
+        player.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
         player.name = "MagePlayer";
 
-        player = Instantiate(KnightPrefab, position + new Vector3(1, 0, 0), rotation);
+        player = Instantiate(KnightPrefab, position - new Vector3(KnightOffset, 0, 0), rotation);
         player.GetComponent<PlayerController>().Class = PlayerController.PlayerClass.Knight;
+        player.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
         player.name = "KnightPlayer";
     }
 }

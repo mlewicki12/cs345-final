@@ -49,18 +49,4 @@ public class EntityInfo : MonoBehaviour
         _health -= dmg;
         return _health;
     }
-
-    private void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.CompareTag("Projectile"))
-        {
-            var spell = other.gameObject.GetComponent<Projectile>();
-            InflictDamage(spell.Damage);
-        }
-        else if (other.gameObject.CompareTag("Enemy"))
-        {
-            var info = other.gameObject.GetComponent<EntityInfo>();
-            info.InflictDamage(Damage);
-        }
-    }
 }
